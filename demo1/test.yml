@@ -1,6 +1,6 @@
 ---
 - name: Hello World print
-  hosts: rhel9 
+  hosts: rhel-9 
   gather_facts: false
   
   tasks: 
