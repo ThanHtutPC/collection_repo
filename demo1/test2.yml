@@ -1,0 +1,12 @@
+---
+- name: check the controller
+  hosts: "{{ groups['managed_node'] }}"
+  tasks: 
+    - name: facts for hosts file
+      set_fact: 
+        content: "{{ lookup('ansible.builtin.file', '/etc/hosts') }}" 
+
+    - name: variable 
+      debug: 
+        var: content.splitlines()[4].split()[0]
+      register: control
