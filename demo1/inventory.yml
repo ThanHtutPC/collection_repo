@@ -1,0 +1,9 @@
+---
+all: 
+  children: 
+    managed_node: 
+      hosts:
+        rhel9: 
+          ansible_host: 192.168.56.10
+          ansible_user: root
+          ansible_connection: ssh 

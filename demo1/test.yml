@@ -1,0 +1,14 @@
+---
+- name: Hello World print
+  hosts: rhel9 
+  gather_facts: false
+  
+  tasks: 
+    - name: Hello World print
+      ansible.builtin.debug: 
+        msg: "Hello World"
+      register: hello_world
+
+    - name: Hello World, LinuxLab
+      ansible.builtin.debug:
+        msg: "{{ hello_world.msg | regex_replace('World', 'LinuxLab') }}" 

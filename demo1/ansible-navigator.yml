@@ -1,0 +1,25 @@
+---
+ansible-navigator:
+  ansible:
+    config:
+      help: false
+    doc:
+      help: false
+      plugin:
+        type: module
+    inventory:
+      entries:
+      - /root/demo_dir/demo1/inventory.yml
+      help: false
+    playbook:
+      help: false
+  execution-environment:
+    container-engine: podman
+    enabled: true
+    image: ghcr.io/ansible/creator-ee:v0.20.0
+    pull:
+      policy: missing 
+  playbook-artifact:
+    enable: false 
+    save-as: 'tmp/{playbook_name}-artifact-{time_stamp}.json'
+  mode: stdout
