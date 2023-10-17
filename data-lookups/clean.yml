@@ -1,0 +1,22 @@
+---
+- name: Remove user and group
+  hosts: all
+  gather_facts:
+
+  tasks:
+    - name: Load group information  
+      ansible.builtin.set_fact: 
+        user_groups: "{{ lookup('ansible.builtin.file', 'groups.yml') | from_yaml }}"
+
+    - name: Remove groups 
+      ansible.builtin.group: 
+        name: "{{ item.name }}"
+        state: absent
+      loop: "{{ user_groups }}"
+
+    - name: Remove users 
+      ansible.builtin.user: 
+        name: "{{ item }}"
+        state: absent
+        remove: true
+      loop: "{{ query('lines', 'cat users.txt') }}"
