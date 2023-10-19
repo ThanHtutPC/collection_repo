@@ -1,0 +1,17 @@
+---
+- name: test3 
+  hosts: localhost
+  tasks: 
+    
+    - name: cat file
+      vars: 
+        file_cat: "{{ query('ansible.builtin.lines', 'cat test.txt')}}"
+      ansible.builtin.debug:
+        var: file_cat[0].split(',')[0]
+      register: output
+    
+    - name: cat file
+      vars: 
+        file_cat_look: "{{ query('ansible.builtin.file', 'test.txt', '/etc/hosts', '/proc/mounts')}}"
+      ansible.builtin.debug:
+        var: file_cat_look

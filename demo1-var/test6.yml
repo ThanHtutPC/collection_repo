@@ -1,0 +1,23 @@
+---
+- name: test6 
+  hosts: all 
+  gather_facts: false 
+
+  tasks:
+    #- name: Templates
+    #  vars: 
+    #    name: class
+    #  debug: 
+    #    msg: "{{ lookup('ansible.builtin.template', 'my.template.j2')}}"
+    
+    - name: ignore 
+      vars: 
+        ignore: "{{ lookup('ansible.builtin.file', '/nosuchfile', errors='warn')}}"
+      debug: 
+        var: ignore 
+
+    - name: pipe 
+      vars: 
+        pipe: "{{ query('ansible.builtin.pipe', 'hostnamectl') }}"
+      debug: 
+        var: pipe

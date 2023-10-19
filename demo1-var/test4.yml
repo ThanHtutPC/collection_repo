@@ -1,0 +1,16 @@
+---
+- name: append 
+  hosts: "{{ groups['managed_node'] }}"  
+  gather_facts: false
+  tasks: 
+    - name: append 
+      vars: 
+        number:
+          - testing1
+          - testing2
+        append: "{{ lookup('ansible.builtin.file', item + '.txt')}}"
+      copy: 
+        content: "{{ append }}"
+        dest: "/tmp/{{ item }}"
+      loop: "{{ number }}"
+        

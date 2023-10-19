@@ -1,0 +1,14 @@
+---
+- name: append 
+  hosts: "{{ groups['managed_node'] }}"  
+  gather_facts: false
+  tasks: 
+    - name: append 
+      ansible.builtin.slurp: 
+        src: /etc/hosts
+      register: hosts_output 
+    
+    - name: save 
+      ansible.builtin.copy: 
+        content: "{{hosts_output['content'] | b64decode}}" 
+        dest: /tmp/slurp
