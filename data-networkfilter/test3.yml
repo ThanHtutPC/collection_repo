@@ -1,0 +1,28 @@
+---
+- name: test3 
+  hosts: all 
+  gather_facts: false 
+  vars_files: 
+    - ./vars/vars.yml
+
+  tasks: 
+    - debug: 
+        var: item
+      with_items: "{{ fruits[0] }}"
+    
+    - debug: 
+        msg: "key = {{ item.key }} value = {{ item.value }}"
+      with_items: 
+        - { key: 'fruit', value: 'apples'}
+        - { key: 'fruit', value: 'oranges'}
+        - { key: 'veggy', value: 'onion' }
+        - { key: 'veggy', value: 'pepper'}
+
+    - file: 
+        path: "{{ item.path }}"
+        state: "{{ item.state }}"
+      with_items: 
+        - { path: "/tmp/dir", state: "directory" }
+        - { path: "/tmp/dir2", state: "directory" }
+        - { path: "/tmp/touch", state: "touch" }
+        - { path: "/tmp/touch2", state: "touch" }

@@ -1,0 +1,25 @@
+---
+- name: test1
+  hosts: all
+  gather_facts: false
+  vars: 
+    list: 
+      - list1 
+      - list2
+      - list3
+  
+  tasks: 
+    - name: loop1
+      ansible.builtin.debug: 
+        var: item 
+      loop: "{{list}}"
+    
+    - name: with_list
+      ansible.builtin.debug: 
+        var: item
+      with_list: "{{list}}"
+
+    - name: using lookup plugin 
+      ansible.builtin.debug: 
+        var: item 
+      loop: "{{lookup('ansible.builtin.list', list)}}"

@@ -1,0 +1,22 @@
+---
+- hosts: all
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - find: 
+        paths: /tmp
+      register: out 
+    
+    - debug: 
+        msg: "{{ item }}"
+      loop: "{{ out.files | map(attribute='path') | list }}"
+
+    - debug: 
+        msg: "{{ ansible_interfaces | select('match', '^enp|eth[0-9]+')}}" 
+
+    - debug:
+        msg: "{{ ansible_interfaces | map('lower') | list }}"
+
+    - debug:
+        msg: "{{ result['vpc']['cidr_block_association_set'] | map(attribute='cidr_block') | list | to_nice_json }}"

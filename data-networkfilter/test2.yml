@@ -1,0 +1,35 @@
+---
+- name: list of list 
+  hosts: all 
+  gather_facts: false 
+
+  tasks: 
+    - name: create build file 
+      vars: 
+        list_of_lists:
+          app_a_tmp_files: 
+            - tmp1
+          app_b_tmp_files:
+            - tmp2
+          app_c_tmp_files:
+            - tmp3
+      ansible.builtin.file:
+        path: "{{ item }}" 
+        state: directory
+      loop: "{{ list_of_lists | flatten }}"
+    
+    - name: create build file 
+      vars: 
+        app_a_tmp_files: 
+         - tmp1 
+        app_b_tmp_files: 
+         - tmp2
+        app_c_tmp_files: 
+         - tmp3
+      ansible.builtin.file: 
+        path: "{{ item }}"
+        state: directory 
+      with_items: 
+        - "{{ app_a_tmp_files }}" 
+        - "{{ app_b_tmp_files }}" 
+        - "{{ app_c_tmp_files }}" 

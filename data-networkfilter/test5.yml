@@ -1,0 +1,44 @@
+---
+- name: debug network
+  hosts: localhost 
+  
+  vars:
+    listips:
+      - 192.168.2.1
+      - 10.0.0.128/25
+      - 172.24.10.0/255.255.255.0
+      - 172.24.10.0/255.255.255.255
+      - ff02::1
+      - ::1
+      - 2001::1/64
+      - 2001::/64
+      - www.redhat.com
+
+  tasks: 
+    - name: test 
+      debug: 
+        var: listips | ansible.utils.ipaddr
+    
+    - name: host
+      debug: 
+        msg: "{{ listips | ansible.utils.ipaddr('host') }}"
+    
+    - name: net
+      debug:
+        msg: "{{ listips | ansible.utils.ipaddr('net') }}"
+
+    - name: private
+      debug: 
+        msg: "{{ listips | ansible.utils.ipaddr('private') }}"
+
+    - name: public
+      debug: 
+        msg: "{{ listips | ansible.utils.ipaddr('public') }}"
+
+    - name: cidr
+      debug: 
+        msg: "{{ listips | ansible.utils.ipaddr('cidr')}}"
+
+    - name: cidr_merge
+      debug: 
+        msg: "{{ listips | ansible.utils.cidr_merge }}"

@@ -1,0 +1,367 @@
+{
+    "plays": [
+        {
+            "__play_name": "exercise",
+            "name": "exercise",
+            "pattern": "rhel-9",
+            "play": "exercise",
+            "play_pattern": "rhel-9",
+            "play_uuid": "1a3c747b-e47f-0312-b0a0-000000000006",
+            "playbook": "/home/student/demo/test5.yml",
+            "playbook_uuid": "9719b782-ce14-48b9-8854-31be1f228b8e",
+            "tasks": [
+                {
+                    "__changed": false,
+                    "__duration": "0s",
+                    "__host": "rhel-9",
+                    "__number": 0,
+                    "__result": "Ok",
+                    "__task": "Debug",
+                    "__task_action": "ansible.builtin.debug",
+                    "duration": 0.090285,
+                    "end": "2023-10-23T15:29:50.903433",
+                    "event_loop": null,
+                    "host": "rhel-9",
+                    "play": "exercise",
+                    "play_pattern": "rhel-9",
+                    "play_uuid": "1a3c747b-e47f-0312-b0a0-000000000006",
+                    "playbook": "/home/student/demo/test5.yml",
+                    "playbook_uuid": "9719b782-ce14-48b9-8854-31be1f228b8e",
+                    "remote_addr": "rhel-9",
+                    "res": {
+                        "changed": false,
+                        "msg": "All items completed",
+                        "results": [
+                            {
+                                "_ansible_item_label": [
+                                    {
+                                        "my_groups": [
+                                            "accounts",
+                                            "development"
+                                        ],
+                                        "name": "john"
+                                    },
+                                    "accounts"
+                                ],
+                                "_ansible_no_log": null,
+                                "_ansible_verbose_always": true,
+                                "ansible_loop_var": "item",
+                                "changed": false,
+                                "failed": false,
+                                "item": [
+                                    {
+                                        "my_groups": [
+                                            "accounts",
+                                            "development"
+                                        ],
+                                        "name": "john"
+                                    },
+                                    "accounts"
+                                ],
+                                "msg": {
+                                    "my_groups": [
+                                        "accounts",
+                                        "development"
+                                    ],
+                                    "name": "john"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": [
+                                    {
+                                        "my_groups": [
+                                            "accounts",
+                                            "development"
+                                        ],
+                                        "name": "john"
+                                    },
+                                    "development"
+                                ],
+                                "_ansible_no_log": null,
+                                "_ansible_verbose_always": true,
+                                "ansible_loop_var": "item",
+                                "changed": false,
+                                "failed": false,
+                                "item": [
+                                    {
+                                        "my_groups": [
+                                            "accounts",
+                                            "development"
+                                        ],
+                                        "name": "john"
+                                    },
+                                    "development"
+                                ],
+                                "msg": {
+                                    "my_groups": [
+                                        "accounts",
+                                        "development"
+                                    ],
+                                    "name": "john"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": [
+                                    {
+                                        "my_groups": [
+                                            "manufacturing",
+                                            "marketing"
+                                        ],
+                                        "name": "jane"
+                                    },
+                                    "manufacturing"
+                                ],
+                                "_ansible_no_log": null,
+                                "_ansible_verbose_always": true,
+                                "ansible_loop_var": "item",
+                                "changed": false,
+                                "failed": false,
+                                "item": [
+                                    {
+                                        "my_groups": [
+                                            "manufacturing",
+                                            "marketing"
+                                        ],
+                                        "name": "jane"
+                                    },
+                                    "manufacturing"
+                                ],
+                                "msg": {
+                                    "my_groups": [
+                                        "manufacturing",
+                                        "marketing"
+                                    ],
+                                    "name": "jane"
+                                }
+                            },
+                            {
+                                "_ansible_item_label": [
+                                    {
+                                        "my_groups": [
+                                            "manufacturing",
+                                            "marketing"
+                                        ],
+                                        "name": "jane"
+                                    },
+                                    "marketing"
+                                ],
+                                "_ansible_no_log": null,
+                                "_ansible_verbose_always": true,
+                                "ansible_loop_var": "item",
+                                "changed": false,
+                                "failed": false,
+                                "item": [
+                                    {
+                                        "my_groups": [
+                                            "manufacturing",
+                                            "marketing"
+                                        ],
+                                        "name": "jane"
+                                    },
+                                    "marketing"
+                                ],
+                                "msg": {
+                                    "my_groups": [
+                                        "manufacturing",
+                                        "marketing"
+                                    ],
+                                    "name": "jane"
+                                }
+                            }
+                        ]
+                    },
+                    "resolved_action": "ansible.builtin.debug",
+                    "start": "2023-10-23T15:29:50.813148",
+                    "task": "Debug",
+                    "task_action": "ansible.builtin.debug",
+                    "task_args": "",
+                    "task_path": "/home/student/demo/test5.yml:17",
+                    "task_uuid": "1a3c747b-e47f-0312-b0a0-000000000008",
+                    "uuid": "24971d4e-658a-4644-a471-118ca91b65cf"
+                }
+            ],
+            "uuid": "1a3c747b-e47f-0312-b0a0-000000000006"
+        }
+    ],
+    "settings_entries": {
+        "ansible-navigator": {
+            "ansible": {
+                "config": {
+                    "help": false
+                },
+                "doc": {
+                    "help": false,
+                    "plugin": {
+                        "type": "module"
+                    }
+                },
+                "inventory": {
+                    "entries": [
+                        "/home/student/demo/inventory.yml"
+                    ],
+                    "help": false
+                },
+                "playbook": {
+                    "help": false,
+                    "path": "/home/student/demo/test5.yml"
+                }
+            },
+            "ansible-builder": {
+                "help": false,
+                "workdir": "/home/student/demo"
+            },
+            "ansible-runner": {
+                "job-events": false
+            },
+            "app": "run",
+            "collection-doc-cache-path": "/home/student/.cache/ansible-navigator/collection_doc_cache.db",
+            "color": {
+                "enable": true,
+                "osc4": true
+            },
+            "editor": {
+                "command": "vi +{line_number} {filename}",
+                "console": true
+            },
+            "enable-prompts": false,
+            "exec": {
+                "command": "/bin/bash",
+                "shell": true
+            },
+            "execution-environment": {
+                "container-engine": "podman",
+                "enabled": true,
+                "image": "registry.redhat.io/ansible-automation-platform-22/ee-supported-rhel8:latest",
+                "pull": {
+                    "policy": "missing"
+                }
+            },
+            "format": "yaml",
+            "images": {
+                "details": [
+                    "everything"
+                ]
+            },
+            "logging": {
+                "append": true,
+                "file": "/home/student/demo/ansible-navigator.log",
+                "level": "warning"
+            },
+            "mode": "stdout",
+            "playbook-artifact": {
+                "enable": true,
+                "save-as": "tmp/{playbook_name}-artifact-{time_stamp}.json"
+            },
+            "settings": {
+                "effective": false,
+                "sample": false,
+                "schema": "json",
+                "sources": false
+            },
+            "time-zone": "UTC"
+        }
+    },
+    "settings_sources": {
+        "ansible-navigator.ansible-builder.help": "Defaults",
+        "ansible-navigator.ansible-builder.workdir": "Defaults",
+        "ansible-navigator.ansible-lint.config": "Not set",
+        "ansible-navigator.ansible-lint.lintables": "Not set",
+        "ansible-navigator.ansible-runner.artifact-dir": "Not set",
+        "ansible-navigator.ansible-runner.job-events": "Defaults",
+        "ansible-navigator.ansible-runner.rotate-artifacts-count": "Not set",
+        "ansible-navigator.ansible-runner.timeout": "Not set",
+        "ansible-navigator.ansible.cmdline": "Not set",
+        "ansible-navigator.ansible.config.help": "Settings file",
+        "ansible-navigator.ansible.config.path": "Not set",
+        "ansible-navigator.ansible.doc.help": "Settings file",
+        "ansible-navigator.ansible.doc.plugin.name": "Not set",
+        "ansible-navigator.ansible.doc.plugin.type": "Settings file",
+        "ansible-navigator.ansible.inventory.entries": "Settings file",
+        "ansible-navigator.ansible.inventory.help": "Settings file",
+        "ansible-navigator.ansible.playbook.help": "Defaults",
+        "ansible-navigator.ansible.playbook.path": "Command line",
+        "ansible-navigator.app": "Command line",
+        "ansible-navigator.collection-doc-cache-path": "Defaults",
+        "ansible-navigator.color.enable": "Defaults",
+        "ansible-navigator.color.osc4": "Defaults",
+        "ansible-navigator.editor.command": "Defaults",
+        "ansible-navigator.editor.console": "Defaults",
+        "ansible-navigator.enable-prompts": "Defaults",
+        "ansible-navigator.exec.command": "Defaults",
+        "ansible-navigator.exec.shell": "Defaults",
+        "ansible-navigator.execution-environment.container-engine": "Settings file",
+        "ansible-navigator.execution-environment.container-options": "Not set",
+        "ansible-navigator.execution-environment.enabled": "Settings file",
+        "ansible-navigator.execution-environment.environment-variables.pass": "Not set",
+        "ansible-navigator.execution-environment.environment-variables.set": "Not set",
+        "ansible-navigator.execution-environment.image": "Settings file",
+        "ansible-navigator.execution-environment.pull.arguments": "Not set",
+        "ansible-navigator.execution-environment.pull.policy": "Settings file",
+        "ansible-navigator.execution-environment.volume-mounts": "Not set",
+        "ansible-navigator.format": "Defaults",
+        "ansible-navigator.images.details": "Defaults",
+        "ansible-navigator.inventory-columns": "Not set",
+        "ansible-navigator.logging.append": "Defaults",
+        "ansible-navigator.logging.file": "Defaults",
+        "ansible-navigator.logging.level": "Defaults",
+        "ansible-navigator.mode": "Command line",
+        "ansible-navigator.playbook-artifact.enable": "Settings file",
+        "ansible-navigator.playbook-artifact.replay": "Not set",
+        "ansible-navigator.playbook-artifact.save-as": "Settings file",
+        "ansible-navigator.settings.effective": "Defaults",
+        "ansible-navigator.settings.sample": "Defaults",
+        "ansible-navigator.settings.schema": "Defaults",
+        "ansible-navigator.settings.sources": "Defaults",
+        "ansible-navigator.time-zone": "Defaults",
+        "settings_file_path": "/home/student/demo/ansible-navigator.yml",
+        "settings_file_source": "Search path"
+    },
+    "status": "successful",
+    "status_color": 10,
+    "stdout": [
+        "",
+        "PLAY [exercise] ****************************************************************",
+        "",
+        "TASK [Debug] *******************************************************************",
+        "\u001b[0;32mok: [rhel-9] => (item=[{'name': 'john', 'my_groups': ['accounts', 'development']}, 'accounts']) => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": {\u001b[0m",
+        "\u001b[0;32m        \"my_groups\": [\u001b[0m",
+        "\u001b[0;32m            \"accounts\",\u001b[0m",
+        "\u001b[0;32m            \"development\"\u001b[0m",
+        "\u001b[0;32m        ],\u001b[0m",
+        "\u001b[0;32m        \"name\": \"john\"\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "\u001b[0;32mok: [rhel-9] => (item=[{'name': 'john', 'my_groups': ['accounts', 'development']}, 'development']) => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": {\u001b[0m",
+        "\u001b[0;32m        \"my_groups\": [\u001b[0m",
+        "\u001b[0;32m            \"accounts\",\u001b[0m",
+        "\u001b[0;32m            \"development\"\u001b[0m",
+        "\u001b[0;32m        ],\u001b[0m",
+        "\u001b[0;32m        \"name\": \"john\"\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "\u001b[0;32mok: [rhel-9] => (item=[{'name': 'jane', 'my_groups': ['manufacturing', 'marketing']}, 'manufacturing']) => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": {\u001b[0m",
+        "\u001b[0;32m        \"my_groups\": [\u001b[0m",
+        "\u001b[0;32m            \"manufacturing\",\u001b[0m",
+        "\u001b[0;32m            \"marketing\"\u001b[0m",
+        "\u001b[0;32m        ],\u001b[0m",
+        "\u001b[0;32m        \"name\": \"jane\"\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "\u001b[0;32mok: [rhel-9] => (item=[{'name': 'jane', 'my_groups': ['manufacturing', 'marketing']}, 'marketing']) => {\u001b[0m",
+        "\u001b[0;32m    \"msg\": {\u001b[0m",
+        "\u001b[0;32m        \"my_groups\": [\u001b[0m",
+        "\u001b[0;32m            \"manufacturing\",\u001b[0m",
+        "\u001b[0;32m            \"marketing\"\u001b[0m",
+        "\u001b[0;32m        ],\u001b[0m",
+        "\u001b[0;32m        \"name\": \"jane\"\u001b[0m",
+        "\u001b[0;32m    }\u001b[0m",
+        "\u001b[0;32m}\u001b[0m",
+        "",
+        "PLAY RECAP *********************************************************************",
+        "\u001b[0;32mrhel-9\u001b[0m                     : \u001b[0;32mok=1   \u001b[0m changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   "
+    ],
+    "version": "2.0.0"
+}

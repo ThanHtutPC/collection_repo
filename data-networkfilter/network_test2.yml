@@ -1,0 +1,44 @@
+---
+- name: network
+  hosts: localhost
+
+  tasks: 
+    - name: address  
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('address') }}"
+    
+    - name: netmask 
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('netmask') }}"
+    
+    - name: prefix
+      debug: 
+        msg: "{{ '192.168.2.1/25' | ansible.utils.ipaddr('prefix') }}"
+
+    - name: broadcast 
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('broadcast') }}"
+
+    - name: network
+      debug:
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('network') }}"
+
+    - name: revdns  
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('revdns') }}"
+
+    - name: fifth address 
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr(5) }}"
+    
+    - name: range usable
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('range_usable')}}"
+
+    - name: network in usable 
+      debug:
+        msg: "{{ '192.168.2.1/24' | ansible.utils.network_in_usable('192.168.2.252') }}"
+
+    - name: network usable 
+      debug: 
+        msg: "{{ '192.168.2.1/24' | ansible.utils.ipaddr('next_usable') }}"
