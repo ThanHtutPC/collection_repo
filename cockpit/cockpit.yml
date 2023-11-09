@@ -1,0 +1,23 @@
+---
+- name: Deploy cockpit 
+  hosts: managed_nodes
+  become: true
+  gather_facts: false
+  tasks: 
+    - name: Ensure cockpit is installed 
+      ansible.builtin.yum: 
+        name: cockpit 
+        state: present
+      
+    - name: Ensure the cockpit service is started and enabled 
+      ansible.builtin.service: 
+        name: cockpit
+        state: started
+        enabled: true
+    
+    - name: Ensure cockpit network 
+      ansible.posix.firewalld: 
+        service: cockpit 
+        permanent: true 
+        immediate: true
+        state: enabled 

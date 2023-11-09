@@ -1,0 +1,8 @@
+---
+all: 
+  children: 
+    managed_nodes: 
+      hosts: 
+        server01: 
+          ansible_hosts: 192.168.56.11
+          ansible_connection: ssh
