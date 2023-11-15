@@ -1,0 +1,27 @@
+---
+- name: Tags testing
+  hosts: managed_nodes 
+  tags:
+    - packages_facts 
+  tasks: 
+    - name: gather packages facts
+      ansible.builtin.package_facts: 
+        manager: auto
+
+    - name: check the httpd packages
+      ansible.builtin.debug:
+        msg: "There have no 'httpd' packages"
+      when: "'httpd' not in ansible_facts['packages']"
+
+- name: tags testing
+  hosts: managed_nodes2
+  tags: 
+    - service_facts
+  tasks: 
+    - name: gather service facts
+      ansible.builtin.service_facts: 
+    
+    - name: check the service
+      ansible.builtin.debug: 
+        msg: "There have 'httpd' services"
+      when: "'httpd.service' in ansible_facts['services']"
