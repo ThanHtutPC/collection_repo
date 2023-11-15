@@ -1,0 +1,57 @@
+2023-11-15T11:48:40.110178+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-11-15T11:48:40.111409+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-11-15T11:48:40.111462+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: ghcr.io/ansible/creator-ee:v0.18.0: image not known
+
+2023-11-15T11:52:12.114556+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-11-15T11:52:12.115238+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-11-15T11:52:12.115298+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: ghcr.io/ansible/creator-ee:v0.18.0: image not known
+
+2023-11-15T11:52:42.412772+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-11-15T11:52:42.413244+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-11-15T11:52:42.413286+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: ghcr.io/ansible/creator-ee:v0.18.0: image not known
+
+2023-11-15T11:52:55.333061+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-11-15T11:52:55.333720+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-11-15T11:52:55.333784+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: ghcr.io/ansible/creator-ee:v0.18.0: image not known
+
+2023-11-15T11:52:55.333855+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Pull policy is set to 'never' and execution environment image was not found locally
+2023-11-15T11:52:59.452416+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' Image inspection failed, image assumed to be corrupted or missing
+2023-11-15T11:52:59.452942+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stdout: []
+
+2023-11-15T11:52:59.452985+00:00 WARNING 'ansible_navigator.image_manager.puller._log_message' stderr: Error: inspecting object: ghcr.io/ansible/creator-ee:v0.18.0: image not known
+
+2023-11-15T11:52:59.453047+00:00 ERROR 'ansible_navigator.image_manager.puller._log_message' Pull policy is set to 'never' and execution environment image was not found locally
+2023-11-15T11:56:29.025018+00:00 ERROR 'ansible_navigator.actions.collections._run_runner' Traceback (most recent call last):
+  File "/home/student/.cache/ansible-navigator/catalog_collections.py", line 42, in <module>
+    from ansible_navigator.utils.key_value_store import KeyValueStore
+ModuleNotFoundError: No module named 'ansible_navigator'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/student/.cache/ansible-navigator/catalog_collections.py", line 45, in <module>
+    from key_value_store import KeyValueStore
+  File "/opt/ansible_navigator_utils/key_value_store.py", line 14, in <module>
+    class KVSKeysView(KeysView[str]):
+TypeError: 'ABCMeta' object is not subscriptable
+
+2023-11-15T11:56:29.060634+00:00 ERROR 'ansible_navigator.actions.collections._parse' Unable to extract collection json from stdout
+2023-11-15T11:57:13.877973+00:00 ERROR 'ansible_navigator.actions.collections._run_runner' Traceback (most recent call last):
+  File "/home/student/.cache/ansible-navigator/catalog_collections.py", line 42, in <module>
+    from ansible_navigator.utils.key_value_store import KeyValueStore
+ModuleNotFoundError: No module named 'ansible_navigator'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/student/.cache/ansible-navigator/catalog_collections.py", line 45, in <module>
+    from key_value_store import KeyValueStore
+  File "/opt/ansible_navigator_utils/key_value_store.py", line 14, in <module>
+    class KVSKeysView(KeysView[str]):
+TypeError: 'ABCMeta' object is not subscriptable
+
+2023-11-15T11:57:20.307856+00:00 ERROR 'ansible_navigator.actions.collections._parse' Unable to extract collection json from stdout
